@@ -1,7 +1,7 @@
 {
-  "name": "stila-ng2-webpack",
+  "name": "simple-ng2-webpack",
   "version": "0.0.1",
-  "description": "A webpack client for stila with angular",
+  "description": "A webpack client for a simple angular2 application",
   "scripts": {
     "start": "webpack-dev-server --inline --progress --port 8080",
     "test": "karma start",
