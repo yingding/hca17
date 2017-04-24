@@ -12,12 +12,15 @@
 *.js
 *.js.map
 
+# allow all config js
 !webpack.config.js
 !karma.conf.js
 !helpers.js
 !webpack.common.js
 !webpack.dev.js
 !webpack.prod.js
+!webpack.test.js
+!karma-test-shim.js
 
 # OS or Editor folders
 .DS_Store

@@ -1,6 +1,4 @@
-/**
- * Created by yingding on 04.04.17.
- */
+
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 describe('App', () => {
