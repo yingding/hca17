@@ -1,5 +1,5 @@
 # Introduction of this ng2 webpack seed in Linux and Macosx
-* change to the client dir with `cd simpleClient`
+* change to the simpleClient directory with `cd simpleClient`
 * Install the local node_modules directory with `npm install`
 * Run ng2 application in dev mode with `npm start`
 * Build your code for production with `npm run build`
