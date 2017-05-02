@@ -70,6 +70,8 @@ This sections shows how can you start this demo-app after you have cloned this r
 * Click on the variables View (with the burger button)
 * Using the "step to next line" button in the debugger to step through your codes.
 
+Note: For further issues with debugging with IntelliJ IDEA Utimate and Webpack, please refer https://manuel-rauber.com/2016/09/30/how-to-debug-angular-2-with-webstorm/
+
 
 # 3. Angular2
 
