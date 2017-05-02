@@ -47,10 +47,29 @@ The following section shows how to use the tool chain relating to developing web
 # 2. How to start?
 This sections shows how can you start this demo-app after you have cloned this repo.
 
-## Get ready
+## 2.1 Get ready
 * Installing all node_modules with <code>npm install</code>
 
-##  
+## 2.2 Debug Ng2 Application 
+* Install Chrome on your system, since Ng2 debugging only works with chrome
+* Install Chrome Addon "JetBrains IDE Support 2.0.9"
+* Double check the setting "Host: 127.0.0.1" and "Port: 63342", otherwise debugger will not work.
+* In IntelliJ IDE -> Menu -> Run -> Edit Configurations... -> + -> JavaScript Debugger, to add a JavaScript Debugger
+### 2.2.1 Settings of JavaScript/Ng2 Debugger
+* Name: wp-ng2-debugger (Choose what ever you want)
+* URL: http://localhost:8080/ (URL information is defined in webpack.dev.js. If needed, please adapt the URL settings for debugger according to your webpack.dev.js definition.)
+* Browser: Chrome (only works with chrome)
+
+### 2.2.2 Try out the Debugger in IntelliJ IDEA IDE
+* Starting your Web-App with `npm start` in the console, so that the webpack-dev-server runs.
+* Set a break point in app.component.ts, for example before line 13 `var message ...`
+* (Optional) you can set multiply break points in your code to examin the behaviour (If you set your break points before `onClick()` statements, what will happen? Nothing, because you just debugger an method declaration.)
+* Run the wp-ng2-debugger in IntelliJ IDE Menu->Run->Debug...->Choose wp-ng2-debugger (If prompted to choose one), a tab in chrome is open and you will see "JetBrains IDE Support is debugging this browser" 
+* Click now the "Button" on the Web-App website
+* Now the debugger tab in IntelliJ for Typescript is activated.
+* Click on the variables View (with the burger button)
+* Using the "step to next line" button in the debugger to step through your codes.
+
 
 # 3. Angular2
 
