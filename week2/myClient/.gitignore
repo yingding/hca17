@@ -1,0 +1,52 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+*.js
+*.js.map
+
+# allow all config js
+!webpack.config.js
+!karma.conf.js
+!helpers.js
+!webpack.common.js
+!webpack.dev.js
+!webpack.prod.js
+!webpack.test.js
+!karma-test-shim.js
+
+# OS or Editor folders
+.DS_Store
+.cache
+.project
+.settings
+.tmproj
+.idea
+.idea/play2_settings.xml
+
+.vs
+nbproject
+Thumbs.db
+
+# NPM packages folder.
+node_modules/
+
+# Webpage local dist folder for production build
+dist/
+
+# Brunch folder for temporary files.
+tmp/
+
+# Brunch output folder.
+public/
+
+# Bower stuff.
+bower_components/
+
