@@ -140,6 +140,7 @@ For example:
 ```javascript
 var data;
 {"price": 20,"meta": "from-the-server","data": [] }
+
 var source = getDataFromUrlOrOtherAsyncSource();
 source
 .filter(item => item.price > 50.60) // filter the item
