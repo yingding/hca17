@@ -78,13 +78,16 @@ Note: For further issues with debugging with IntelliJ IDEA Utimate and Webpack, 
 * Copy the app.component.html and app.component.css file and rename to app.component.root.html and app.component.root.css files, update the css and html linking in app.component.root.ts
 * start the webpack-dev-server with `npm start` in the console
 * remove all codes in the app.component.root.html and commented out the background css style in `assets/css/styles.css`
-
+* ... (demo the changes)
 
 
 Note: if the webpack-dev-server is running and the code changes, the code changes can be viewed immediately in the browser.
  
+# Home Work:
+* working on the presentation 1
+* finish reading the following sections 3-6 about Angular2
+* **Important**: get familiar with the RxJS Examples in https://angular.io/docs/ts/latest/guide/server-communication.html , we will need these knowledge in the next session to have server and client exchange data
  
-
 # 3. Angular2
 
 ## 3.1 Bindings 
