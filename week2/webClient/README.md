@@ -72,14 +72,36 @@ This sections shows how can you start this demo-app after you have cloned this r
 
 Note: For further issues with debugging with IntelliJ IDEA Utimate and Webpack, please refer https://manuel-rauber.com/2016/09/30/how-to-debug-angular-2-with-webstorm/
 
+# Hacking Arround the Codes
+* Now copy the app.component.ts to app.component.root.ts
+* Change the name of the component to "AppComponentRoot", import "AppComponentRoot" in app.module.ts, add the AppComponentRoot component in the module declarations, bootstrap from the AppComponentRoot
+* Copy the app.component.html and app.component.css file and rename to app.component.root.html and app.component.root.css files, update the css and html linking in app.component.root.ts
+* start the webpack-dev-server with `npm start` in the console
+* remove all codes in the app.component.root.html and commented out the background css style in `assets/css/styles.css`
 
+
+
+Note: if the webpack-dev-server is running and the code changes, the code changes can be viewed immediately in the browser.
+ 
+ 
 
 # 3. Angular2
+
+## 3.1 Bindings 
+### Property Binding
+* Component Property Binding with square brackets []
+
+### Event Binding
+* Template Event Binding with parenthesis ()
+
+### Input Decoration
+* Input property with Input Decoration `@Input()`
+* More about Input property can be found unter https://angular.io/docs/ts/latest/cookbook/component-communication.html#!#parent-to-child-on-changes
 
 ## Binding a component property to Angular Template
 * More details about two-way binding can be found under https://angular.io/docs/ts/latest/guide/template-syntax.html
 * Examples of using model bindings in form can be found under https://angular.io/docs/ts/latest/guide/forms.html
-* **Note:** For two-way binding above Angular2 RC5, <code>import {FormsModule} from '@angular/forms';</code> is needed in your AngularModule.
+* **Note:** For two-way binding in Angular2@2.4.10, <code>import {FormsModule} from '@angular/forms';</code> is needed in your AngularModule.
 
 ## Asterisk (*) appearing before directive names
 * The * is a bit of syntactic sugar that makes it easier to read and write directives that modify HTML layout with the help of templates. NgFor, NgIf, and NgSwitch all add and remove element subtrees that are wrapped in `<template>` tags.
@@ -163,17 +185,6 @@ ngAfterContentInit | After Angular projects external content into its view.	| ye
 ngAfterContentChecked | After Angular checks the bindings of the external content that it projected into its view. | yes | no
 ngAfterViewInit	| After Angular creates the component's view(s). | yes | no
 ngAfterViewChecked | After Angular checks the bindings of the component's view(s). | yes | no
-
-## Bindings 
-### Property Binding
-* Component Property Binding with square brackets []
-
-### Event Binding
-* Template Event Binding with parenthesis ()
-
-### Input Decoration
-* Input property with Input Decoration `@Input()`
-* More about Input property can be found unter https://angular.io/docs/ts/latest/cookbook/component-communication.html#!#parent-to-child-on-changes
 
 # 5. Angular2 Dependency Injection
 In software engineering, dependency injection is a software design pattern that implements inversion of control for resolving dependencies. A dependency is an object that can be used (a service). An injection is the passing of a dependency to a dependent object (a client) that would use it.
