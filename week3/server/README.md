@@ -3,7 +3,7 @@
 * click on the `import project` in the popup menu while build.sbt is opening 
 
 
-#Additional Readings about Play Java Seed (Starter)
+# Additional Readings about Play Java Seed (Starter)
 
 This is a starter application that shows how Play works.  Please see the documentation at https://www.playframework.com/documentation/latest/Home for more details.
 
