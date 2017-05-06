@@ -12,12 +12,20 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {NavBarComponent} from './navbar.component';
 import {ExampleComponent, BindingChildComponent, BindingParentComponent} from './examples';
+
+/*
+ * import submodules, all the exported components in submodule,
+ * can be used directly, by calling the selectors.
+ */
+import {AppInputsModule} from './inputs';
+
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         routing,
-        HttpModule
+        HttpModule,
+        AppInputsModule // app inputs sub modules
     ],
     declarations: [
         AppComponent,
