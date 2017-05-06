@@ -21,8 +21,4 @@ import { InputsRootComponent } from './inputs.root.component';
     bootstrap: [InputsRootComponent]
 })
 export class AppInputsModule {
-    private mood : string = "";
-    send() {
-        console.log("call service: ", this.mood);
-    }
 }

@@ -6,11 +6,11 @@ import {} from 'AppInputsModule';
     selector: 'example',
     template: `
 <div>
+    <!-- the input module is imported in appModule -->
+    <inputs-root></inputs-root>
     <p>You are visiting {{componentName}}.</p>
     <binding-parent></binding-parent>
-</div>
-<!-- the input module is imported in appModule -->
-<inputs-root></inputs-root>`
+</div>`
 })
 export class ExampleComponent {
     public componentName: string;
