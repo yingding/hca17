@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A webpack client for a simple angular2 application",
   "scripts": {
-    "start": "webpack-dev-server --inline --progress --port 8080",
+    "start": "webpack-dev-server --config config/webpack-dev-local.js --inline --progress --port 8080",
     "test": "karma start",
     "prod": "npm run clean:dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "build": "npm run clean:dist && webpack --config config/webpack-dev-server.js --progress --profile --bail",
@@ -16,6 +16,7 @@
     "@angular/core": "2.4.10",
     "@angular/forms": "2.4.10",
     "@angular/http": "2.4.10",
+    "@angular/material": "2.0.0-beta.2",
     "@angular/platform-browser": "2.4.10",
     "@angular/platform-browser-dynamic": "2.4.10",
     "@angular/router": "3.4.10",

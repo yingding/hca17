@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A webpack client for a simple angular2 application",
   "scripts": {
-    "start": "webpack-dev-local --inline --progress --port 8080",
+    "start": "webpack-dev-server --config config/webpack-dev-local.js --inline --progress --port 8080",
     "test": "karma start",
     "prod": "npm run clean:dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "build": "npm run clean:dist && webpack --config config/webpack-dev-server.js --progress --profile --bail",

@@ -1,1 +1,5 @@
 <h3>this is the root component of {{packageName}}</h3>
+
+<md-input-container>
+    <input mdInput [(ngModel)]="mood" (keydown.enter)="send()" placeholder="Your current mood">
+</md-input-container>
