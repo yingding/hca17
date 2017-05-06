@@ -21,6 +21,7 @@
 !webpack.prod.js
 !webpack.test.js
 !karma-test-shim.js
+!clean-dist.js
 
 # OS or Editor folders
 .DS_Store

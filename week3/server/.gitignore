@@ -8,7 +8,7 @@ target
 /RUNNING_PID
 /.vscode
 
-public/*
+public
 .DS_Store
 *.log
 *.swp
