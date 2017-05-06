@@ -56,8 +56,8 @@ This sections shows how can you start this demo-app after you have cloned this r
 * Double check the setting "Host: 127.0.0.1" and "Port: 63342", otherwise debugger will not work.
 * In IntelliJ IDE -> Menu -> Run -> Edit Configurations... -> + -> JavaScript Debugger, to add a JavaScript Debugger
 ### 2.2.1 Settings of JavaScript/Ng2 Debugger
-* Name: wp-ng2-debugger (Choose what ever you want)
-* URL: http://localhost:8080/ (URL information is defined in webpack.dev.js. If needed, please adapt the URL settings for debugger according to your webpack.dev.js definition.)
+* Name: client-ng2-debugger (Choose what ever you want)
+* URL: http://localhost:9000/ (URL information is defined in webpack.dev.js. If needed, please adapt the URL settings for debugger according to your webpack.dev.js definition.)
 * Browser: Chrome (only works with chrome)
 
 ### 2.2.2 Try out the Debugger in IntelliJ IDEA IDE
