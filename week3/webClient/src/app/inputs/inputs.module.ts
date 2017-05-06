@@ -11,7 +11,8 @@ import { MoodsService} from './inputs.service';
         BrowserModule,
         FormsModule,
         HttpModule,
-        MdInputModule
+        MdInputModule,
+        MdButtonModule
     ],
     exports: [
         InputsRootComponent // the component in sub-module shall be exported

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import * as moment from 'moment';
-import {MoodModel} from './mood.model';
-import {MoodsService} from './inputs.service';
 // https://momentjs.com/docs/
 // timestamp testing with https://www.epochconverter.com/
+import {MoodModel} from './mood.model';
+import {MoodsService} from './inputs.service';
+import {Http, Response} from '@angular/http';
 
 @Component({
     selector: 'inputs-root',
@@ -17,6 +18,9 @@ import {MoodsService} from './inputs.service';
 export class InputsRootComponent {
     private packageName : string = "Input Module";
     private moods : MoodModel[] = [];
+    private responseMessage : string = null;
+    private responseMessageColor : string = null;
+
 
     constructor(private _moodService: MoodsService) {
 
@@ -34,6 +38,19 @@ export class InputsRootComponent {
         this.moods.push(currentMood);
     }
     sendData() {
-        this._moodService.sendMoods(this.moods);
+        this._moodService.sendMoods(this.moods).subscribe(
+            response => this.handleResponse(response),
+            error => this.handleResponse(error)
+        );
+    }
+
+    handleResponse(response: Response) {
+        if (response.ok) {
+            this.responseMessage = response.text();
+            this.responseMessageColor = 'lawngreen';
+        } else {
+            this.responseMessage = response.text();
+            this.responseMessageColor = 'red';
+        }
     }
 }
