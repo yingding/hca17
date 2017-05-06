@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "description": "A webpack client for a simple angular2 application",
   "scripts": {
-    "start": "webpack-dev-server --inline --progress --port 8080",
+    "start": "webpack-dev-local --inline --progress --port 8080",
     "test": "karma start",
-    "build": "npm run clean:dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "deploy": "npm run clean:dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "build": "npm run clean:dist && webpack --config config/webpack-dev-server.js --progress --profile --bail",
     "clean:dist": "node ./config/clean-dist.js"
   },
   "license": "MIT",

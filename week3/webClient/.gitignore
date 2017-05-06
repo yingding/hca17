@@ -17,11 +17,13 @@
 !karma.conf.js
 !helpers.js
 !webpack.common.js
-!webpack.dev.js
+!webpack-dev-local.js
+!webpack-dev-server.js
 !webpack.prod.js
 !webpack.test.js
 !karma-test-shim.js
 !clean-dist.js
+
 
 # OS or Editor folders
 .DS_Store

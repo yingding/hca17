@@ -5,7 +5,8 @@
   "scripts": {
     "start": "webpack-dev-server --inline --progress --port 8080",
     "test": "karma start",
-    "build": "npm run clean:dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "deploy": "npm run clean:dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "build": "npm run clean:dist && webpack --config config/webpack-dev-server.js --progress --profile --bail",
     "clean:dist": "node ./config/clean-dist.js"
   },
   "license": "MIT",
