@@ -4,6 +4,7 @@ import { FormsModule} from '@angular/forms';
 import { HttpModule} from '@angular/http';
 import { MdButtonModule, MdCheckboxModule, MdInputModule } from '@angular/material';
 import { InputsRootComponent } from './inputs.root.component';
+import { MoodsService} from './inputs.service';
 
 @NgModule({
     imports: [
@@ -17,6 +18,9 @@ import { InputsRootComponent } from './inputs.root.component';
     ],
     declarations: [
         InputsRootComponent
+    ],
+    providers: [
+        MoodsService
     ],
     bootstrap: [InputsRootComponent]
 })

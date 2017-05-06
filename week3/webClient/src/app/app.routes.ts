@@ -10,4 +10,5 @@ export const routes: Routes = [
     {path: 'about', component: AboutComponent}
 ];
 
-export const routing = RouterModule.forRoot(routes);
+// add useHash is true to enable HashLocationStrategy
+export const routing = RouterModule.forRoot(routes, {useHash: true});

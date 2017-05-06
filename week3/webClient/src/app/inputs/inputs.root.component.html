@@ -1,5 +1,5 @@
 <h3>this is the root component of {{packageName}}</h3>
 <!-- Reference of Angular2 Material https://material.angular.io/components -->
 <md-input-container>
-    <input mdInput [(ngModel)]="mood" (keydown.enter)="sendData()" placeholder="Your current mood">
+    <input mdInput [(ngModel)]="mood" (keydown.enter)="cacheData()" placeholder="Enter your mood">
 </md-input-container>
