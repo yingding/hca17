@@ -1,4 +1,4 @@
-# Import Project in IntelliJ Idea utimate
+# 1. Import Project in IntelliJ Idea utimate
 * open the file `server/build.sbt` in your IntelliJ IDE
 * click on the `import project` in the popup menu while build.sbt is opening 
 
