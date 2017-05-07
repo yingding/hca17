@@ -37,8 +37,9 @@ public final class AppConfigService {
             Logger.info ("Loading configuration file: {}",  appConfigFile.getAbsoluteFile());
             APP_CONFIG = ConfigFactory.parseFile(appConfigFile).getConfig(STR_CONF_PREFIX);
         } catch (FileNotFoundException e) {
+            this.APP_CONFIG = null;
             Logger.error("Error in opening configuration file: {}", e.getMessage());
-            e.printStackTrace();
+            // e.printStackTrace();
         }
     }
 

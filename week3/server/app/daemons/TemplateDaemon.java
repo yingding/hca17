@@ -48,6 +48,9 @@ public abstract class TemplateDaemon {
             delayInterval = appConf.getLong(delayInterval_key);
             executionIntervalInSec = appConf.getLong(executionInterval_key);
         } catch (Exception e) {
+            // set the defaults
+            delayInterval = 60;
+            executionIntervalInSec = 600; // every ten minutes
             Logger.error("Config Data of {} can not be loaded /n {}", tag, e.getMessage());
         }
 
