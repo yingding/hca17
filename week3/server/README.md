@@ -2,6 +2,46 @@
 * open the file `server/build.sbt` in your IntelliJ IDE
 * click on the `import project` in the popup menu while build.sbt is opening 
 
+# 2. Setting up connections to mongodb
+The following packages are used to establish a connection to mongodb in play framework. The libraryDependencies are declared in build.sbt file
+```
+libraryDependencies += "org.mongodb" % "mongo-java-driver" % "3.2.2"
+libraryDependencies += "org.jongo" % "jongo" % "1.3.0"
+libraryDependencies += "uk.co.panaxiom" %% "play-jongo" % "2.0.0-jongo1.3"
+libraryDependencies += "commons-collections" % "commons-collections" % "3.2.1"
+``` 
+
+# 3. Install mongodb
+* Install the mongodb according to https://docs.mongodb.com/manual/administration/install-community/
+* on the ubuntu server, change the bindIp in /etc/mongd.conf file to your server ip, allow remote access to mongdb server
+* restart mongodb with `sudo service mongod restart`
+* use `netstat -tulpn` to display the services running in the system
+
+
+# 4. Adding an admin user to your mongodb server
+* `mongo -host <ip of the server>`
+* `use mydb` (to create a db names mydb)
+* Run the following command in your mongo shell in your server to create a user and password for the database
+```
+db.createUser({user:"xxxxxxx", pwd:"xxxxxxx", roles:["readWrite", "dbAdmin"]})
+```
+Note: you shall change the user name and pwd according to your need.
+
+# 5. Open firewall settings on the server to allow remote access to mongodb
+* List all the open ports with `iptables -L`
+* Use iptable to setup firewall and open the incomming mongdb connections `sudo iptables -A INPUT -p tcp --destination-port 27017 -m state --state NEW,ESTABLISHED -j ACCEPT`
+* save the iptable settings with `sudo iptables-save > /etc/iptables.conf`
+* (optional) load the iptable settings with `sudo iptables-restore < /etc/iptables.conf`
+
+For more details please refer to:
+* https://docs.mongodb.com/manual/tutorial/configure-linux-iptables-firewall/
+* https://www.rosehosting.com/blog/how-to-open-ports-in-ubuntu-and-centos-using-iptables/
+
+# 6. Testing the connection with Robomongo
+* Download Robomongo from https://robomongo.org/ for your os system
+* Test the connection to your db server
+
+
 
 # Additional Readings about Play Java Seed (Starter)
 
