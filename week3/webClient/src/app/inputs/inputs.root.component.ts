@@ -5,6 +5,7 @@ import * as moment from 'moment';
 import {MoodModel} from './mood.model';
 import {MoodsService} from './inputs.service';
 import {Http, Response} from '@angular/http';
+import {InputMoodComponent} from './input.mood.component';
 
 @Component({
     selector: 'inputs-root',
@@ -20,7 +21,7 @@ export class InputsRootComponent {
     private moods : MoodModel[] = [];
     private responseMessage : string = null;
     private responseMessageColor : string = null;
-
+    //private clearHistory : boolean = false;
 
     constructor(private _moodService: MoodsService) {
 
@@ -48,6 +49,7 @@ export class InputsRootComponent {
         if (response.ok) {
             this.responseMessage = response.text();
             this.responseMessageColor = 'lawngreen';
+            this.moods = []; // clear the moods
         } else {
             this.responseMessage = response.text();
             this.responseMessageColor = 'red';

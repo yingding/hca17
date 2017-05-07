@@ -16,7 +16,10 @@ export class MoodsService {
        // construct a request header, for json content
        let headers = new Headers({'Content-Type': 'application/json'});
        let options = new RequestOptions({headers: headers});
-
-       return this.http.post(this.API_URL, moods, options);
+       let body = {
+            seed:  "seedToChange",
+            moods: moods
+       };
+       return this.http.post(this.API_URL, body, options);
     }
 }

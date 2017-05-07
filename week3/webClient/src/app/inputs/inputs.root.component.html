@@ -4,5 +4,7 @@
     <input mdInput [(ngModel)]="mood" (keydown.enter)="cacheData()" placeholder="Enter your mood">
 </md-input-container>
 <button md-raised-button (click)="sendData()">Submit</button>
+<!-- print out the input history -->
+<input-mood [moods]="moods"></input-mood>
 
 <span *ngIf="responseMessage!=null" [style.background-color]="responseMessageColor">{{responseMessage}}</span>

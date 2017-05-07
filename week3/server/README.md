@@ -41,7 +41,13 @@ For more details please refer to:
 * Download Robomongo from https://robomongo.org/ for your os system
 * Test the connection to your db server
 
-
+# 7. Debugging the Server
+* start debugger with `./sbt -jvm-debug 9999` , debugging port 9999
+* In IntelliJ IDEA utimate : menu -> Run -> Edit Configurations... -> + -> remote 
+* Add the name: play-java-debugger
+* In settings section : host "127.0.0.1", Port "9999"
+* Apply and O.k.
+* Set the break point and run the play-java-debugger
 
 # Additional Readings about Play Java Seed (Starter)
 

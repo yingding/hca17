@@ -5,6 +5,7 @@ import { HttpModule} from '@angular/http';
 import { MdButtonModule, MdCheckboxModule, MdInputModule } from '@angular/material';
 import { InputsRootComponent } from './inputs.root.component';
 import { MoodsService} from './inputs.service';
+import { InputMoodComponent } from './input.mood.component';
 
 @NgModule({
     imports: [
@@ -18,7 +19,8 @@ import { MoodsService} from './inputs.service';
         InputsRootComponent // the component in sub-module shall be exported
     ],
     declarations: [
-        InputsRootComponent
+        InputsRootComponent,
+        InputMoodComponent
     ],
     providers: [
         MoodsService
