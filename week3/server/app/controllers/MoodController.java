@@ -1,16 +1,23 @@
 package controllers;
 
-import Models.Mood;
+import Models.MoodEntry;
+import Models.MoodObject;
 import Utilities.Authentication;
+import Utilities.TimeUtil;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.google.inject.Inject;
 import com.typesafe.config.Config;
 import play.Logger;
+import play.libs.Json;
 import play.mvc.BodyParser;
 import play.mvc.Controller;
 import play.mvc.Result;
 import services.AppConfigService;
 import services.DBService;
+
+import java.util.Date;
+import java.util.Iterator;
 
 
 /**
@@ -36,7 +43,7 @@ public class MoodController extends Controller {
         if (Authentication.isAuthorizedSeed(appConf, requestTcpSeed)) {
             JsonNode moods = json.findPath("moods");
             for (JsonNode moodNode : moods) {
-                Mood mood = new Mood(
+                MoodEntry mood = new MoodEntry(
                         moodNode.findPath("timestamp").asLong(),
                         moodNode.findPath("mood").asText()
                 );
@@ -56,6 +63,26 @@ public class MoodController extends Controller {
             return ok("moods saved successfully");
         } else {
             return badRequest("moods has inapproperate structure, can not be all saved");
+        }
+    }
+
+    public Result getAllMoods() {
+        Logger.info("Get all Moods on " + TimeUtil.getDateStr(new Date()));
+        boolean succeed = true;
+        // parse the body
+        JsonNode json = request().body().asJson();
+        if (json == null) {
+            return badRequest("Expecting Json data");
+        }
+        String requestTcpSeed = json.findPath("seed").asText();
+        if (Authentication.isAuthorizedSeed(appConf, requestTcpSeed)) {
+            // fetch data from db
+            Iterator<MoodObject> moods = DBService.findAllMoods();
+            ObjectNode result = Json.newObject();
+            result.set("moods", Json.toJson(moods));
+            return ok(result);
+        } else {
+            return unauthorized("Unauthorized seed");
         }
     }
 }

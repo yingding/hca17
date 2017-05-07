@@ -87,6 +87,7 @@ Note: if the webpack-dev-server is running and the code changes, the code change
 * working on the presentation 1
 * finish reading the following sections 3-6 about Angular2
 * **Important**: get familiar with the RxJS Examples in https://angular.io/docs/ts/latest/guide/server-communication.html , we will need these knowledge in the next session to have server and client exchange data
+* **Important**: get familiar with the HTTP in https://angular.io/docs/ts/latest/tutorial/toh-pt6.html
  
 # 3. Angular2
 
@@ -213,5 +214,9 @@ Modules import one another using a module loader. At runtime the module loader i
 
 ## Import Module
 * Import all members from a file as a specific variable name `import * as YourModuleIdentifier from 'path/module'`, the ModuleIdentifier can be different as the module name.
+
+# 7. Use sharedService to allow sibling component communication
+* Reference Example of sibling component communication https://embed.plnkr.co/P8xCEwSKgcOg07pwDrlO/
+* Information about sibling communication use share services https://github.com/angular/angular.io/issues/2663
 
 

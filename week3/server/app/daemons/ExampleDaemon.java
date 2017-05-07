@@ -1,5 +1,6 @@
 package daemons;
 
+import Utilities.TimeUtil;
 import akka.actor.ActorSystem;
 import com.typesafe.config.Config;
 import play.Logger;
@@ -14,7 +15,6 @@ public class ExampleDaemon extends TemplateDaemon {
     private final static String TAG_key = ExampleDaemon.class.getCanonicalName();
     private static final String delayInterval_key = "exampleDaemon.delay";
     private static final String executionInterval_key = "exampleDaemon.executionInterval";
-    private static final Format formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     public ExampleDaemon() {
         super();
@@ -27,9 +27,10 @@ public class ExampleDaemon extends TemplateDaemon {
 
     final Runnable exampleDaemon = () -> {
         try {
-            // getTime() return a utc timestamp
-            //final long now = new Date().getTime();
-            final String now = formatter.format(new Date());
+            /* getTime() return a utc timestamp
+             * final long now = new Date().getTime();
+             */
+            final String now = TimeUtil.getDateStr(new Date());
             Logger.info("{} executed at {}", tag, now);
         } catch (Exception e) {
             Logger.error("Error in {} {}", tag, e.getMessage());

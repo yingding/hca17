@@ -3,13 +3,14 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET      /                          controllers.Assets.at(path="/public", file="index.html")
+GET      /                   controllers.Assets.at(path="/public", file="index.html")
 # Map static resources from the /public folder to the /assets URL path
 # Map assets
-GET     /assets/*file               controllers.Assets.versioned(path="/public/assets", file: Asset)
+GET     /assets/*file        controllers.Assets.versioned(path="/public/assets", file: Asset)
 # Map js and css files
 GET     /*file               controllers.Assets.versioned(path="/public", file: Asset)
-
-POST    /api/moods/                                        controllers.MoodController.saveMoodInput()
+# Get and post rest api for moods, it is important the url are the same as in the url in client, the last / maybe needed
+POST    /api/moods/post/         controllers.MoodController.saveMoodInput()
+POST    /api/moods/get/          controllers.MoodController.getAllMoods()
 
 

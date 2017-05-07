@@ -2,34 +2,35 @@ package Models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.sql.Time;
+
 /**
  * @author Yingding Wang on 07.05.17.
  */
-public class Mood {
+public class MoodEntry {
     @JsonProperty("_id")
-    private Timestamp timestamp; // my serializable timestamp object
+    private Timestamp timestamp;
+    //private Timestamp timestamp; // my serializable timestamp object
     private String mood;
 
     // default constructor needed by Json mapper
-    public Mood() {
+    public MoodEntry() {
     }
 
-    public Mood(long timestamp, String mood) {
+    public MoodEntry(long timestamp, String mood) {
         this.timestamp = new Timestamp(timestamp);
         this.mood = mood;
     }
 
     public String toString() {
-        return this.timestamp.toString() + "mood:" + mood;
+        return "timestamp:" + timestamp + ", mood:" + mood;
     }
 
     public Timestamp getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(long timestamp) {
-        this.timestamp = new Timestamp(timestamp);
-    }
+    public void setTimestamp(long timestamp) { this.timestamp = new Timestamp(timestamp); }
 
     public String getMood() {
         return mood;

@@ -6,6 +6,8 @@ import { MdButtonModule, MdCheckboxModule, MdInputModule } from '@angular/materi
 import { InputsRootComponent } from './inputs.root.component';
 import { MoodsService} from './inputs.service';
 import { InputMoodComponent } from './input.mood.component';
+import { FetchMoodComponent } from './input.fetch.component';
+import { RefreshSharedService } from './inputs.shared.service';
 
 @NgModule({
     imports: [
@@ -20,10 +22,12 @@ import { InputMoodComponent } from './input.mood.component';
     ],
     declarations: [
         InputsRootComponent,
-        InputMoodComponent
+        InputMoodComponent,
+        FetchMoodComponent
     ],
     providers: [
-        MoodsService
+        MoodsService,
+        RefreshSharedService
     ],
     bootstrap: [InputsRootComponent]
 })

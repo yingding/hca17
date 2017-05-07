@@ -1,7 +1,11 @@
 package services;
 
-import Models.Mood;
+import Models.MoodEntry;
+import Models.MoodObject;
+import com.mongodb.DBObject;
+import com.mongodb.LazyDBObject;
 import org.jongo.MongoCursor;
+import org.jongo.ResultHandler;
 import play.api.Play;
 import uk.co.panaxiom.playjongo.PlayJongo;
 
@@ -13,11 +17,29 @@ public class DBService {
     private static PlayJongo jongo = Play.current().injector().instanceOf(PlayJongo.class);
     private static String MOODS = "moods"; // collection name
     // save a single mood entry
-    public static boolean saveMood(Mood mood) {
+    public static boolean saveMood(MoodEntry mood) {
         return jongo.getCollection(MOODS).save(mood).wasAcknowledged();
     }
     // fetch all moods
-    public static MongoCursor<Mood> findAllMoods() {
-        return jongo.getCollection(MOODS).find().as(Mood.class);
+    public static MongoCursor<MoodObject> findAllMoods() {
+        // sort _id (timestamp) descending with -1
+        return jongo.getCollection(MOODS).find().sort("{_id: -1}").map(moodResultHandler());
+    }
+
+    private static ResultHandler<MoodObject> moodResultHandler() {
+        return new ResultHandler<MoodObject>() {
+            @Override
+            public MoodObject map(DBObject result) {
+                Object id = result.get("_id");
+                long timestamp;
+                try {
+                    timestamp = (long) ((LazyDBObject) id).get("timestamp");
+                } catch (ClassCastException e) {
+                    timestamp = (long) id;
+                }
+                String mood = (String) result.get("mood");
+                return new MoodObject(timestamp, mood);
+            }
+        };
     }
 }
