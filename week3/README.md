@@ -33,7 +33,7 @@ Note:
 * Stop play server with `Ctl + D`
 * Then `enter` 
 
-## 1.4 See demon in action
+## 1.4 See daemon in action
 * The play module follows lazy loading, with out the tcp request server module will not be loaded.
 * Call your web-client `localhost:9000` in browser and examine the output in the sbt console
 * A example daemon printing out a date string for every minutes can be seen.
