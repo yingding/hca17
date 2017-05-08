@@ -2,6 +2,10 @@
   "name": "simple-ng2-webpack",
   "version": "0.0.1",
   "description": "A webpack client for a simple angular2 application",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/npm.git"
+  },
   "scripts": {
     "start": "webpack-dev-server --config config/webpack-dev-local.js --inline --progress --port 8080",
     "test": "karma start",

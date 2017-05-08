@@ -219,4 +219,7 @@ Modules import one another using a module loader. At runtime the module loader i
 * Reference Example of sibling component communication https://embed.plnkr.co/P8xCEwSKgcOg07pwDrlO/
 * Information about sibling communication use share services https://github.com/angular/angular.io/issues/2663
 
+# Issues in this seed
+* updated repository attribute about git and npm.git: https://github.com/npm/npm/issues/3446
+
 
