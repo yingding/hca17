@@ -37,3 +37,10 @@ Note:
 * The play module follows lazy loading, with out the tcp request server module will not be loaded.
 * Call your web-client `localhost:9000` in browser and examine the output in the sbt console
 * A example daemon printing out a date string for every minutes can be seen.
+
+# 2. Issue while import the sbt project in IntelliJ IDEA
+* right click on week3 (root of the project)
+* Click on "File" (in Menu) -> Project Structure... -> remove the root and root-build module in Module section with "-"
+* open the build.sbt in server folder in IntelliJ IDEA utimate
+* Click on the "import project" on the yellow popup message
+* After indexing the play java project shall be imported properly
