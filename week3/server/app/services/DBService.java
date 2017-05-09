@@ -26,6 +26,10 @@ public class DBService {
         return jongo.getCollection(MOODS).find().sort("{_id: -1}").map(moodResultHandler());
     }
 
+    public static long countAllMoods() {
+        return jongo.getCollection(MOODS).count("");
+    }
+
     private static ResultHandler<MoodObject> moodResultHandler() {
         return new ResultHandler<MoodObject>() {
             @Override
