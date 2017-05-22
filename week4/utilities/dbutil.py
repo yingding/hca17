@@ -5,7 +5,6 @@ import datetime as dt
 class MongoDbUtil():
     @classmethod
     def getDB(cls, user, password, host, port, dbname):
-        # uri = "mongodb://stila:abc123@localhost:27017/stila-upload-data?authMechanism=SCRAM-SHA-1"
         uri = "mongodb://{}:{}@{}:{}/{}?authMechanism=SCRAM-SHA-1".format(user, password, host, port, dbname)
         client = MongoClient(uri)
         db = client.get_default_database()
