@@ -24,7 +24,7 @@ class TimeUtil():
         return (dt - cls.epoch).total_seconds() * 1.0
 
     @classmethod
-    def timestampInSecs2Datetime(cls, timestamp):
+    def timestamp_in_secs_2_datetime(cls, timestamp):
         """
         this method transforms the long representation of a utc timestamp to a datetime object
         :param timestamp: long
