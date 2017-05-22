@@ -16,7 +16,7 @@ To make the local sbt executable
 ```
 myApp.home="/Users/yingding/VCS/github/hca17/week3/server/conf"
 ```
-Note: Windows OS shall use the exactly the same path string as linux and macosx, for local.properties in Android, windows need to ``\\` and ``\:` in the path.
+Note: Windows OS shall use the exactly the same path string as linux and macosx, for local.properties in Android, windows need to `\\` and `\:` in the path.
 * edit the mongodb connection URL
 ```
 playjongo.uri="mongodb://username:password@127.0.0.1:27017/mydb"
