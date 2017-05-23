@@ -2,7 +2,7 @@
 from pymongo import MongoClient
 import datetime as dt
 
-class MongoDbUtil():
+class MongoDbUtil:
     @classmethod
     def getDB(cls, user, password, host, port, dbname):
         uri = "mongodb://{}:{}@{}:{}/{}?authMechanism=SCRAM-SHA-1".format(user, password, host, port, dbname)

@@ -12,5 +12,13 @@ Rerence: <a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">PEP
 * A very good reference of <a href="https://julien.danjou.info/blog/2013/guide-python-static-class-abstract-methods" target="_blank">using static, class methods in Python3</a>
 
 # PyMongo Reference
+* <a href="https://docs.mongodb.com/getting-started/python/query/" target="_blank">MongoDB PyMongo Tutorial</a>
 * <a href="http://api.mongodb.com/python/current/api/" target="_blank">Current API Referen</a>
 * <a href="http://api.mongodb.com/python/current/tutorial.html" target="_blank">Tutorial</a>
+
+# Interactive Code Running in IntelliJ
+* Menu -> Tools -> Python Console...
+* Select the section of code that shall be run in the Python Console and press `shift + alt + E`
+* Show the variables in the Python Console while press the sixth button from the toolbar positioned on the left side of the Python Console
+Note: debugging will achieve the same effect
+

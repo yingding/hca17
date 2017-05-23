@@ -96,6 +96,7 @@ ENV/
 .idea/misc.xml
 .idea/modules.xml
 .idea/workspace.xml
+.idea/vcs.xml
 
 # Macosx Files
 .DS_Store
