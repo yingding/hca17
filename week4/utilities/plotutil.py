@@ -2,10 +2,12 @@ import matplotlib.pyplot as plt
 from matplotlib.dates import DateFormatter
 
 class PlotUtil:
+    # TODO: need be tested , still buggy
     @classmethod
     def ploting(xvals, yvals, xlabel_str, ylabel_str, title, style, label, grid=True):
         """
         creates a plot of time series data
+
         """
         # close all old plots
         plt.close("all")
