@@ -1,3 +1,10 @@
+# How to use this week template
+* open the week folder in the IntelliJ IDEA utimate IDE
+* click on the `week`(project root) of the opened project
+* click on Menu->File->Project Structure
+* Unter section `Project Settings`-> Project -> Project SDK -> choose Python(above 3.5)
+* (Optional) If the Python SDK is not specified, use section "Platform Settings" -> SDKs to specify the local Python SDK and added it to your Project SDK then. 
+
 # Packages needed for python3
 * PyMongo 
 * Pandas
