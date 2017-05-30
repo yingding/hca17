@@ -97,7 +97,10 @@ ENV/
 .idea/modules.xml
 .idea/workspace.xml
 .idea/vcs.xml
+
 .idea/
+# no data folder, the data can be fetch automatically
+data/
 
 # Macosx Files
 .DS_Store
