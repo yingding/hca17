@@ -22,8 +22,14 @@ Note: the current version of TensorFlow is 1.1
 * load a CSV dataset and make it available to Keras.
 * create a neural network model with Keras for a regression problem.
 * use scikit-learn with Keras to evaluate models using cross-validation.
+<!-- 
 * perform data preparation in order to improve skill with Keras models.
 * tune the network topology of models with Keras.
+-->
+
+# How to use this example?
+* run the fetch_data.py to fetch data
+* run the application.py to run the example
 
 
 
