@@ -31,5 +31,7 @@ Note: the current version of TensorFlow is 1.1
 * run the fetch_data.py to fetch data
 * run the application.py to run the example
 
+# Add Virtual Environment
+* https://www.jetbrains.com/help/idea/2016.3/creating-virtual-environment.html
 
 
