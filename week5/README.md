@@ -34,4 +34,7 @@ Note: the current version of TensorFlow is 1.1
 # Add Virtual Environment
 * https://www.jetbrains.com/help/idea/2016.3/creating-virtual-environment.html
 
+# Change Logs 
+* Since the __file__ can not be recognized by the interactive shell, refered to <a href="https://stackoverflow.com/questions/16771894/python-nameerror-global-name-file-is-not-defined" target="_blank">this stackoverflow reference</a>. The __file__ is not anymore used in the `application.py`.
+
 
