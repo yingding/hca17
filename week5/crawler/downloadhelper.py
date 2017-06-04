@@ -17,8 +17,8 @@ class DownloadHelper:
             os.makedirs(data_dir)
         if not os.path.isfile(data_path):
             wget.download(cls.bosten_housing_data_url, out=data_dir)
-            return data_path
-        return ""
+        # always return the data_path
+        return data_path
 
     @classmethod
     def bosten_housing_file_path(cls):

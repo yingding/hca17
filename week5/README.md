@@ -28,8 +28,8 @@ Note: the current version of TensorFlow is 1.1
 -->
 
 # How to use this example?
-* run the fetch_data.py to fetch data
-* run the application.py to run the example
+<!-- * run the fetch_data.py to fetch data --> 
+* run the application.py to run the example (data will be fetched automatically)
 
 # Add Virtual Environment
 * https://www.jetbrains.com/help/idea/2016.3/creating-virtual-environment.html

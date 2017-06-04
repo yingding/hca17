@@ -9,13 +9,17 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 from crawler.downloadhelper import DownloadHelper
 import os
+
 # The dataset is in fact not in CSV format in the UCI Machine Learning Repository, the attributes are instead separated by whitespace. We can load this easily using the pandas library. We can then split the input (X) and output (Y) attributes so that they are easier to model with Keras and scikit-learn.
 
 data_dir = DownloadHelper.download_directory_path()
 print(data_dir)
-data_path = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "data", DownloadHelper.bosten_housing_file_name)
-)
+
+# get the default data_url for the bosten_housing
+data_url = DownloadHelper.bosten_housing_data_url
+
+# download the data file
+data_path = DownloadHelper.download_data(data_url)
 print(data_path)
 
 # load dataset
