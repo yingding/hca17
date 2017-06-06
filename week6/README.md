@@ -19,6 +19,8 @@ Note: While examining the highcharts demo, open the view options, than copy the 
 # HighChart Offline Export
 https://www.highcharts.com/docs/export-module/client-side-export
 
+# Todo:
+load your data to the plots
 
 <!-- 
 # 0. Config Server seed (Linux & Macosx & Windows)
