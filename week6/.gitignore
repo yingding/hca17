@@ -1,0 +1,14 @@
+# Created by .ignore support plugin (hsz.mobi)
+/.idea
+stila-home.iml
+
+# OS or Editor folders
+.DS_Store
+.cache
+.project
+.settings
+.tmproj
+
+.vs
+nbproject
+Thumbs.db

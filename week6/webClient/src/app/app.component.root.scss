@@ -1,0 +1,36 @@
+//main {
+//    padding: 1em;
+//    font-family: Arial, Helvetica, sans-serif;
+//    text-align: left;
+//    margin-top: 50px;
+//    display: block;
+//}
+
+head {
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    //margin-top: 50px;
+    margin-top: 20px;
+    display: block;
+}
+
+main{
+    //margin-top: 60px;
+    margin-top: 20px;
+    margin-left: 235px;
+    padding: 15px;
+    -ms-overflow-x: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+@media screen and (max-width: 992px) {
+    main {
+        margin-left: 0px !important;
+    }
+}
+
