@@ -14,7 +14,7 @@
 Note: While examining the highcharts demo, open the view options, than copy the options for the chart you are interested.
 
 # HighCharts Examples
-* <a href="https://github.com/gevgeny/angular2-highcharts/blob/master/README.md" target="_blank">angular2-highcharts examples</a> 
+* [angular2-highcharts examples](https://github.com/gevgeny/angular2-highcharts/blob/master/README.md){:target="_blank"}
 
 # HighChart Offline Export
 * https://www.highcharts.com/docs/export-module/client-side-export
