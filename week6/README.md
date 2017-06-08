@@ -8,8 +8,8 @@
 * `npm install angular2-highcharts --save`
 
 # HighCharts Demo
-https://www.highcharts.com/demo
-https://www.highcharts.com/demo/pie-basic
+* https://www.highcharts.com/demo
+* https://www.highcharts.com/demo/pie-basic
 
 Note: While examining the highcharts demo, open the view options, than copy the options for the chart you are interested.
 
@@ -17,7 +17,7 @@ Note: While examining the highcharts demo, open the view options, than copy the 
 * <a href="https://github.com/gevgeny/angular2-highcharts/blob/master/README.md" target="_blank">angular2-highcharts examples</a> 
 
 # HighChart Offline Export
-https://www.highcharts.com/docs/export-module/client-side-export
+* https://www.highcharts.com/docs/export-module/client-side-export
 
 # Todo:
 load your data to the plots
