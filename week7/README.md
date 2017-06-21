@@ -2,7 +2,7 @@
 
 ## Making a github page for the project
 
-* Introduction of how to make a github page https://pages.github.com/#project-site
+* Introduction of how to <a href="https://pages.github.com/#project-site" target="_blank">make a github page</a>
 
 ## Short approach of making a github page for the project
 
