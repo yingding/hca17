@@ -37,7 +37,15 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
 -->
-# hca17
-code template repository for class hca17
+# HCA17
+code template repository for class <a href="http://www.pms.ifi.lmu.de/lehre/praktikum/master/hca/17ss/">practicum HCA SS17</a>
 
-[Week1 Introduction](week1/simpleClient/README.md)
+# The schedule of this course:
+
+[Week1 Introduction of building simple client with Angular2](week1/simpleClient/README.md)
+[Week2 Building Web Client with Angular2](week2/webClient/README.md)
+[Week3 Server Framework and Data Storage](week3/README.md)
+[Week4 Preprocessing and Displaying Datat with Python3](week4/README.md)
+[Week5 Data Analysis with Python3](week5/README.md)
+[Week6 Visualizing processed data of HC systems](week6/README.md)
+[Week7 Advertising System and solving cold start](week7/README.md)
