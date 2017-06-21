@@ -9,4 +9,4 @@
 * Go to the settings of the github project
 * Changin gthe Source for the github page to master or what ever branch you like
 * Choose a theme
-* Call the github page with the link: https://<github-user-name>.github.io/<repository-name>
+* Call the github page with the link: `https://<github-user-name>.github.io/<repository-name>`
