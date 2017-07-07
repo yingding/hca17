@@ -42,12 +42,18 @@ For more details please refer to:
 * Test the connection to your db server
 
 # 7. Debugging the Server
-* start debugger with `./sbt -jvm-debug 9999` , debugging port 9999
+* (Linux, MacOSX)start debugger with `./sbt -jvm-debug 9999` , debugging port 9999
+* (Windows) start debugger with
+```console
+set SBT_OPTS="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=9999" && sbt
+```
 * In IntelliJ IDEA utimate : menu -> Run -> Edit Configurations... -> + -> remote 
 * Add the name: play-java-debugger
 * In settings section : host "127.0.0.1", Port "9999"
 * Apply and O.k.
 * Set the break point and run the play-java-debugger
+
+<!-- windows reference from https://stackoverflow.com/questions/23332378/how-can-i-enable-remote-debugging-for-sbt-in-windows -->
 
 # Additional Readings about Play Java Seed (Starter)
 
